@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>DP-layer</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="./css/deepLayer.css" rel="stylesheet">
+
+</head>
+<body>
+  
+	<button id="layerbtn" class="trigger-button" type="button">点击弹出</button>
+
+	<div id="content">
+	<h1>Deep弹出窗</h1>
+	<p>Bang! Bang! Bang!</p>
+	</div>
+
+	<!--[if lte IE 8]>
+	    <script src="../deep-ie8.js"></script>
+	<![endif]-->
+	<!-- <script src="velocity.min.js"></script> -->
+	<script src="../deepEase.js"></script>
+	<script src="./js/deepLayer.js"></script>
+	
+	<script>
+	    // ie8背景半透明和点击背景关闭目前是鱼和熊掌的关系，暂时没有时间解决,未来估计也不会考虑解决 
+		var myContent = document.getElementById('content');
+		var layerBtn = document.getElementById('layerbtn');
+		deepLayer({
+			openBtn:layerBtn,
+			closeBtn: true,
+			content: myContent,
+			width: 600,
+			bgLayer: true
+		});
+		
+	</script>
+
+	<script>
+		// DO-back to top demo
+	</script>
+
+		
+</body>
+</html>
